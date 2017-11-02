@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+        }
+        body {
+            height: 100%;
+        }
+
+        .layout {
+            height: 100%;
+        }
+        .layout__table {
+            display: table;
+            border-collapse: collapse;
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        .layout__body {
+            overflow: auto;
+            position: relative;
+            min-height: 100%;
+        }
+        .layout__footer {
+            display: table-row;
+            height: 1px;
+        }
+
+
+
+        /* STYLING */
+            * { margin: 0; padding: 0 5%; opacity: .85 }
+            html { background: #f55; opacity: 1; font: bold 20px/1.5 sans-serif; color: #fff; }
+            .layout { background: #ff0; }
+            .layout__table { background: #0f0; }
+            .layout__body { background: #0ff; }
+            .layout__footer { background: #05f; }
+            p { margin: 32px 0; padding: 0; text-align: center; background: #555; }
+            span { position: absolute; bottom: 0; right: 0; background: #00f; }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <div class="layout__table">
+        <div class="layout__body">
+
+            <p>Dynamic Content <br><br> Lorem ipsum dolor sit amet.</p>
+            <span>Position: Absolute</span>
+        </div>
+        <div class="layout__footer">
+            <p>Sticky Footer!</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
