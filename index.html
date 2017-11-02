@@ -22,13 +22,12 @@
             border-collapse: collapse;
             position: relative;
 
-            height: 1px;
-            min-height: 100%;
+            height: 100%;
             width: 100%;
         }
         .layout__body {
+            display: table-row;
             overflow: auto;
-            position: relative;
             min-height: 100%;
         }
         .layout__footer {
@@ -46,7 +45,7 @@
             .layout__body { background: #0ff; }
             .layout__footer { background: #05f; }
             p { margin: 32px 0; padding: 0; text-align: center; background: #555; }
-            span { position: absolute; bottom: 0; right: 0; background: #00f; }
+            span { position: absolute; bottom: 150px; right: 0; background: #00f; }
     </style>
 </head>
 <body>
