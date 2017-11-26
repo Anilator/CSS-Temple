@@ -14,58 +14,50 @@
             height: 100%;
         }
 
-        .layout {
-            height: 100%;
-        }
-        .layout__table {
-            display: table;
-            border-collapse: collapse;
-            position: relative;
 
+        .sticky {
+            display: table;
             height: 100%;
             width: 100%;
+            border-collapse: collapse;
         }
-        .layout__row {
+        .sticky__body {
             display: table-row;
+            height: 99.9%;
         }
-        .layout__row-body {
-            height: 99%;
+        .sticky__footer {
+            display: table-row;
+            height: 0.1%;
         }
-        .layout__row-footer {
-            height: 1%;
-        }
-        .layout__body {
-            overflow: auto;
+        .body, .footer {
             position: relative;
             height: 100%;
         }
 
 
 
-        /* STYLING */
-            * { margin: 0; padding: 0 5%; opacity: .85 }
-            html { background: #f55; opacity: 1; font: bold 20px/1.5 sans-serif; color: #fff; }
-            .layout { background: #ff0; }
-            .layout__table { background: #0f0; }
-            .layout__body { background: #0ff; }
-            .layout__footer { background: #05f; }
-            p { margin: 0; padding: 0; text-align: center; background: #555; }
-            span { position: absolute; bottom: 150px; right: 0; background: #00f; }
+        /* STYLING (may be deleted) */
+            * { margin: 0; padding: 0 5%; background: rgba(0,0,0,.3); }
+            html { background: #fff; opacity: 1; font: 15px/1.5 sans-serif; color: #fff; text-align: center; }
+            /*body { background: #fff; }*/
+            .body { position: relative; }
+            .body:before { content: 'Top of content' }
+            .body:after { content: 'Bottom of content (position absolute)'; position: absolute; bottom: 0; left: 0; right: 0;}
+            .sticky__footer { background: #058; }
+            .footer:before { content: 'Sticky Footer \A with flexible height'; white-space: pre; }
+            p { margin: 0; padding: 0; text-align: center; height: 50px;}
     </style>
 </head>
 <body>
-<div class="layout">
-    <div class="layout__table">
-        <div class="layout__row layout__row-body">
-
-            <div class="layout__body">Dynamic Content <br>
-                <p style="height: 100%"></p>
-                <br> Lorem ipsum dolor sit amet.
-                <span>Position: Absolute</span>
-            </div>
+<div class="sticky">
+    <div class="sticky__body">
+        <div class="body">
+            <p>some inner element</p>
         </div>
-        <div class="layout__row layout__row-footer">
-            <p>Sticky Footer!</p>
+    </div>
+    <div class="sticky__footer">
+        <div class="footer">
+            <p>some inner element</p>
         </div>
     </div>
 </div>
