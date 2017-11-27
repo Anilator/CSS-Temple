@@ -39,27 +39,68 @@
         /* STYLING (may be deleted) */
             * { margin: 0; padding: 0 5%; background: rgba(0,0,0,.3); }
             html { background: #fff; opacity: 1; font: 15px/1.5 sans-serif; color: #fff; text-align: center; }
-            /*body { background: #fff; }*/
-            .body { position: relative; }
             .body:before { content: 'Top of content' }
             .body:after { content: 'Bottom of content (position absolute)'; position: absolute; bottom: 0; left: 0; right: 0;}
             .sticky__footer { background: #058; }
             .footer:before { content: 'Sticky Footer \A with flexible height'; white-space: pre; }
             p { margin: 0; padding: 0; text-align: center; height: 50px;}
+            p:before { content: 'some inner element' }
+            #nav { position: fixed; right: 4px; top: 40%; width: 50px; padding: 0; }
+            #nav i { display: block; margin: 8px 0; padding: 8px 0; cursor: pointer; user-select: none;}
     </style>
 </head>
 <body>
-<div class="sticky">
-    <div class="sticky__body">
-        <div class="body">
-            <p>some inner element</p>
+    <div class="sticky">
+        <div class="sticky__body">
+            <div class="body">
+                <p></p>
+            </div>
+        </div>
+        <div class="sticky__footer">
+            <div class="footer">
+                <p></p>
+            </div>
         </div>
     </div>
-    <div class="sticky__footer">
-        <div class="footer">
-            <p>some inner element</p>
-        </div>
+
+    <div class="header">
+        <h2>Some multiline <br> striked header</h2>
     </div>
-</div>
+
+
+
+
+
+
+    <!-- Controls for this Demo -->
+    <span id="nav">
+        <i onclick="showPage('prev')">prev</i>
+        <i onclick="showPage('next')">next</i>
+    </span>
+    <script>
+        (function start() {
+            var pageNames = [
+                'Sticky footer', 'Striked header',
+            ];
+            var pages = document.querySelectorAll('body > div');
+            var currPageNum = 0;
+
+            /* Hide all pages */
+            for (var i = pages.length; i--;) {pages[i].style.display = 'none';}
+
+
+            window.showPage = function showPage(location) {
+                pages[currPageNum].style.display = 'none';
+
+                if ((location == 'prev') && (currPageNum)) currPageNum--;
+                if ((location == 'next') && (currPageNum < pages.length-1)) currPageNum++;
+                if ((0 <= location) && (location < pages.length)) currPageNum = location;
+
+                pages[currPageNum].style.display = '';
+                document.title = pageNames[currPageNum];
+            }
+            showPage(0);
+        })()
+    </script>
 </body>
 </html>
