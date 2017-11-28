@@ -15,6 +15,8 @@
         }
 
 
+
+        /* Sticky footer */
         .sticky {
             display: table;
             height: 100%;
@@ -34,19 +36,65 @@
             height: 100%;
         }
 
+        /* Striked header */
+        .header-striked {
+            overflow: hidden;
+            text-align: center;
+        }
+        .header-striked > * {
+            position: relative;
+            display: inline-block;
+            padding: 0 16px;
+        }
+        .header-striked > *:before,
+        .header-striked > *:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            height: 2px;
+            margin-top: -1px;
+            width: 2000px;
+            background: #fff;
+        }
+        .header-striked > *:after {
+            left: 100%;
+            right: auto;
+        }
 
 
         /* STYLING (may be deleted) */
-            * { margin: 0; padding: 0 5%; background: rgba(0,0,0,.3); }
             html { background: #fff; opacity: 1; font: 15px/1.5 sans-serif; color: #fff; text-align: center; }
-            .body:before { content: 'Top of content' }
-            .body:after { content: 'Bottom of content (position absolute)'; position: absolute; bottom: 0; left: 0; right: 0;}
-            .sticky__footer { background: #058; }
-            .footer:before { content: 'Sticky Footer \A with flexible height'; white-space: pre; }
-            p { margin: 0; padding: 0; text-align: center; height: 50px;}
-            p:before { content: 'some inner element' }
-            #nav { position: fixed; right: 4px; top: 40%; width: 50px; padding: 0; }
-            #nav i { display: block; margin: 8px 0; padding: 8px 0; cursor: pointer; user-select: none;}
+            body { margin: 0; }
+            #nav { position: fixed; right: 4px; top: 40%; width: 50px; padding: 0; background: none; }
+            #nav i { display: block; margin: 8px 0; padding: 0; height: 50px; line-height: 50px; border-radius: 50%; cursor: pointer; user-select: none;}
+
+            .p0 { padding: 0 5%; background: rgba(0,0,0,.3); }
+            .p0 * { margin: 0; padding: 0 5%; background: rgba(0,0,0,.3); }
+            .p0 .body:before { content: 'Top of content' }
+            .p0 .body:after { content: 'Bottom of content (position absolute)'; position: absolute; bottom: 0; left: 0; right: 0;}
+            .p0 .sticky__footer { background: #058; }
+            .p0 .footer:before { content: 'Sticky Footer \A with flexible height'; white-space: pre; }
+            .p0 p { margin: 0; padding: 0; text-align: center; height: 50px;}
+            .p0 p:before { content: 'some inner element' }
+
+            .p1 {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+                padding: 8px;
+                background:
+                    linear-gradient( 90deg, rgba(25, 25, 32, .8) 50%, rgba(0,0,0, .2) 50%),
+                    linear-gradient( 90deg, rgba(22, 23, 30, .8) 50%, rgba(0,0,0, .2) 50%),
+                    linear-gradient( 90deg, rgba(25, 20, 32, .8) 50%, rgba(0,0,0, .2) 50%),
+                    linear-gradient( 90deg, rgba(23, 26, 29, .8) 50%, rgba(0,0,0, .2) 50%),
+                    linear-gradient( 0deg, #555 0%, #000 100%);
+                background-size: 49em 1em, 11em 1em, 7em 1em, 3em 1em, 100vw 100vh;
+            }
+            .p1 .header-striked { background: none; margin: 40px 0; }
+            .p1 h2 { background: none; }
     </style>
 </head>
 <body>
@@ -63,8 +111,14 @@
         </div>
     </div>
 
-    <div class="header">
-        <h2>Some multiline <br> striked header</h2>
+    <div>
+        <div class="header-striked">
+            <h2>Some striked header</h2>
+        </div>
+
+        <div class="header-striked">
+            <h2>Some multiline <br> striked header</h2>
+        </div>
     </div>
 
 
@@ -78,7 +132,7 @@
         <i onclick="showPage('next')">next</i>
     </span>
     <script>
-        (function start() {
+        (function app() {
             var pageNames = [
                 'Sticky footer', 'Striked header',
             ];
@@ -92,14 +146,18 @@
             window.showPage = function showPage(location) {
                 pages[currPageNum].style.display = 'none';
 
+                location = location[0]=='#' ? location.slice(1) : location;
                 if ((location == 'prev') && (currPageNum)) currPageNum--;
                 if ((location == 'next') && (currPageNum < pages.length-1)) currPageNum++;
                 if ((0 <= location) && (location < pages.length)) currPageNum = location;
 
                 pages[currPageNum].style.display = '';
                 document.title = pageNames[currPageNum];
+                window.location.hash = currPageNum;
+                document.body.className = 'p' + currPageNum;
             }
-            showPage(0);
+
+            showPage(location.hash || 0);
         })()
     </script>
 </body>
