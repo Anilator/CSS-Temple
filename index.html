@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic" rel="stylesheet">
     <style>
         html {
             height: 100%;
@@ -141,10 +142,92 @@
                 padding: 0 8px 40px 40px;
             }
 
+        /* Grid */
 
+
+
+            .col {
+                position: relative;
+                box-sizing: border-box;
+                float: left;
+                min-height: 16px;
+                padding: 0 16px;
+                width: 50%;
+                color: #333;
+            }
+
+            .border:before {
+                content: '';
+                position: absolute;
+                bottom: 0; left: 0; right: 0; top: 0;
+                border: 1px solid;
+            }
+
+            .fz_12 {
+                margin: 0 0 -3px 0;
+                padding-top: 19px;
+                font-size: 12px;
+                line-height: 16px;
+            }
+            .fz_14 {
+                margin: 0 0 -2px 0;
+                padding-top: 18px;
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            .fz_16 {
+                margin: 0;
+                padding: 25px 0 7px 0;
+                font-size: 16px;
+                line-height: 32px;
+            }
+            .fz_18 {
+                margin: 0;
+                padding: 24px 0 8px 0;
+                font-size: 18px;
+                line-height: 32px;
+            }
+            .fz_20 {
+                margin: 0;
+                padding: 24px 0 8px 0;
+                font-size: 20px;
+                line-height: 32px;
+            }
+            .fz_24 {
+                margin: 0;
+                padding: 22px 0 10px 0;
+                font-size: 24px;
+                line-height: 32px;
+            }
+            .fz_32 {
+                margin: 0;
+                padding: 19px 0 13px 0;
+                font-size: 32px;
+                line-height: 32px;
+            }
+
+            .fz_40 {
+                margin: 0;
+                padding: 64px 0 0 0;
+                font-size: 40px;
+                line-height: 64px;
+            }
+            .fz_48 {
+                margin: 0;
+                padding: 61px 0 3px 0;
+                font-size: 48px;
+                line-height: 64px;
+            }
+            .fz_56 {
+                margin: 0;
+                padding: 58px 0 6px 0;
+                font-size: 56px;
+                line-height: 64px;
+            }
 
         /* STYLING (may be deleted) */
-            html { background: #fff; opacity: 1; font: 15px/24px 'FreeSans', sans-serif; color: #fff; text-align: center; }
+            html { background: #fff; opacity: 1; font: 15px/24px 'Open Sans', 'FreeSans', sans-serif; color: #fff; text-align: center; }
             body { margin: 0; }
             #nav { position: fixed; right: 4px; top: 40%; width: 50px; padding: 0; background: none; }
             #nav i { display: block; margin: 8px 0; padding: 0; height: 50px; line-height: 50px; background: rgba(0,0,0,.4); border-radius: 50%; cursor: pointer; user-select: none;}
@@ -176,6 +259,8 @@
 
             .p2 > div { max-width: 600px; margin: auto; }
             .p2 > div > div + div { margin-top: 40px; }
+            .p3 { background: linear-gradient(rgba(0, 119, 179, 0.1) 1px, transparent 1px) left -1px / 16px 16px; color: #333; }
+            .p3 .col { text-align: left; }
     </style>
 </head>
 <body>
@@ -234,7 +319,63 @@
         </div>
     </div>
 
+    <div>
+        <h1 class="fz_56">This is an vertical rhytm example</h1>
+        <div class="col border">
+            <p class="fz_56">
+                56 lorem Lorem ipsum dolor sit amet
+            </p>
+            <p class="fz_48">
+                48 lorem Lorem ipsum dolor sit amet
+            </p>
+            <p class="fz_40">
+                40 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
+            </p>
+            <p class="fz_40">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
+                it amet, consectetur adipisicing elit. Officia, explicab
 
+                it amet, consectetur adipisicing elit. Officia, explicab
+                it amet, consectetur adipisicing elit. Officia, explicabit amet, consectetur adipisicing elit. Officia, explicab
+            </p>
+        </div>
+        <div class="col">
+            <p class="fz_32">
+                32 lorem
+            </p>
+            <p class="fz_32">
+                32 lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <p class="fz_24">
+                24 lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, illum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
+            </p>
+            <p class="fz_20">
+                20 lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, illum.
+                quasi quam repudiandae iste sint recusandae soluta voluptatibus illum voluptates,
+                sunt! Temporibus amet fugit, sit, id numquam sequi? Suscipit facere provident
+            </p>
+            <p class="fz_18">
+                18 lorem Lorem ipsum dolor sit
+            </p>
+            <p class="fz_16">
+                16 lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, illum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
+            </p>
+            <p class="fz_14">
+                14 lorem
+            </p>
+            <p class="fz_14">
+                lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, illum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
+            </p>
+            <p class="fz_12">
+                12 lorem Lorem
+            </p>
+        </div>
+    </div>
 
 
 
@@ -247,7 +388,7 @@
     <script>
         (function app() {
             var pageNames = [
-                'Sticky footer', 'Striked header', 'Breaked border',
+                'Sticky footer', 'Striked header', 'Breaked border', 'Vertical rhytm'
             ];
             var pages = document.querySelectorAll('body > div');
             var currPageNum = 0;
