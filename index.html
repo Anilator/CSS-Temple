@@ -144,25 +144,6 @@
 
         /* Grid */
 
-
-
-            .col {
-                position: relative;
-                box-sizing: border-box;
-                float: left;
-                min-height: 16px;
-                padding: 0 16px;
-                width: 50%;
-                color: #333;
-            }
-
-            .border:before {
-                content: '';
-                position: absolute;
-                bottom: 0; left: 0; right: 0; top: 0;
-                border: 1px solid;
-            }
-
             .fz_12 {
                 margin: 0 0 -3px 0;
                 padding-top: 19px;
@@ -226,6 +207,10 @@
                 line-height: 64px;
             }
 
+            .hr_64 {
+                margin: 32px 0 30px 0;
+            }
+
         /* STYLING (may be deleted) */
             html { background: #fff; opacity: 1; font: 15px/24px 'Open Sans', 'FreeSans', sans-serif; color: #fff; text-align: center; }
             body { margin: 0; }
@@ -259,8 +244,25 @@
 
             .p2 > div { max-width: 600px; margin: auto; }
             .p2 > div > div + div { margin-top: 40px; }
-            .p3 { background: linear-gradient(rgba(0, 119, 179, 0.1) 1px, transparent 1px) left -1px / 16px 16px; color: #333; }
-            .p3 .col { text-align: left; }
+
+            .p3 { height: auto; padding: 0 8px; background: linear-gradient(rgba(0, 119, 179, 0.1) 1px, transparent 1px) left -1px / 16px 16px; color: #333; }
+            .p3 .col {
+                position: relative;
+                box-sizing: border-box;
+                display: inline-block;
+                min-height: 16px;
+                padding: 0 16px;
+                width: 40%;
+                color: #333;
+                text-align: left;
+                vertical-align: top;
+            }
+            .p3 .border:before {
+                content: '';
+                position: absolute;
+                bottom: 0; left: 0; right: 0; top: 0;
+                border: 1px solid;
+            }
     </style>
 </head>
 <body>
@@ -321,6 +323,23 @@
 
     <div>
         <h1 class="fz_56">This is an vertical rhytm example</h1>
+        <hr class="hr_64">
+
+        <p class="fz_16">
+            The main idea is &mdash; to make a grid of rows with 16px height of each.
+        <p class="fz_32">
+            Height of everything on the page should be divisible by 16.
+        </p>
+        <p class="fz_16">
+            This rule includes margins, paddings and computed height of each element.
+        </p>
+        <p class="fz_32">
+            Page's view is based on typography.
+        </p>
+        <p class="fz_16">
+            Your texts are the base of other elements like images, blocks, forms etc.
+        </p>
+
         <div class="col border">
             <p class="fz_56">
                 56 lorem Lorem ipsum dolor sit amet
