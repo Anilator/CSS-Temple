@@ -210,12 +210,23 @@
             .hr_64 {
                 margin: 32px 0 30px 0;
             }
+            .table_16 {
+                min-width: 320px;
+                margin: 0 auto 16px;
+                border-collapse: collapse;
+            }
+            .table_16 td {
+                padding: 9px 0 6px 0;
+                font-size: 16px;
+                line-height: 32px;
+                border-bottom: 1px solid #aaa;
+            }
 
         /* STYLING (may be deleted) */
             html { background: #fff; opacity: 1; font: 15px/24px 'Open Sans', 'FreeSans', sans-serif; color: #fff; text-align: center; }
             body { margin: 0; }
             #nav { position: fixed; right: 4px; top: 40%; width: 50px; padding: 0; background: none; }
-            #nav i { display: block; margin: 8px 0; padding: 0; height: 50px; line-height: 50px; background: rgba(0,0,0,.4); border-radius: 50%; cursor: pointer; user-select: none;}
+            #nav i { display: block; margin: 8px 0; padding: 0; height: 50px; color: #fff; line-height: 50px; background: rgba(0,0,0,.4); border-radius: 50%; cursor: pointer; user-select: none;}
 
             .p0 { padding: 0 5%; background: rgba(0,0,0,.3); }
             .p0 * { margin: 0; padding: 0 5%; background: rgba(0,0,0,.3); }
@@ -251,12 +262,13 @@
                 box-sizing: border-box;
                 display: inline-block;
                 min-height: 16px;
-                padding: 0 16px;
-                width: 40%;
+                padding: 0 8px;
                 color: #333;
                 text-align: left;
                 vertical-align: top;
             }
+            .p3 .col:nth-child(even) { background: rgba(0,0,0,.1); }
+            .p3 .col:nth-child(odd) { background: rgba(50,50,0,.1); }
             .p3 .border:before {
                 content: '';
                 position: absolute;
@@ -322,78 +334,144 @@
     </div>
 
     <div>
-        <h1 class="fz_56">This is an vertical rhytm example</h1>
+        <h1 class="fz_56">Vertical rhythm</h1>
         <hr class="hr_64">
 
-        <p class="fz_16">
-            The main idea is &mdash; to make a grid of rows with 16px height of each.
         <p class="fz_32">
+            Line height measures everything.
+        </p>
+        <p class="fz_16">
+            The main idea is to make a grid of rows with 16px height of each.
+        <p class="fz_24">
             Height of everything on the page should be divisible by 16.
         </p>
         <p class="fz_16">
-            This rule includes margins, paddings and computed height of each element.
+            This rule is applied to margins and total height of each element.
         </p>
         <p class="fz_32">
-            Page's view is based on typography.
+            Line-heights are discrete: 16px, 32px, 64px.
         </p>
         <p class="fz_16">
-            Your texts are the base of other elements like images, blocks, forms etc.
+            Line height is NOT a font size multiplied by some value like 1.5 as usual. <br>
+            There are 3 groups of possible font sizes suitable for selected line heights: <br>
         </p>
 
-        <div class="col border">
+        <table class="table_16">
+            <tr>
+                <td>16px:</td>
+                <td>12 and 14 px fonts</td>
+            </tr>
+            <tr>
+                <td>32px:</td>
+                <td>16&ndash;32 px fonts</td>
+            </tr>
+            <tr>
+                <td>64px:</td>
+                <td>40&ndash;64 px fonts</td>
+            </tr>
+        </table>
+
+        <p class="fz_32">
+            Why not 48px?
+        </p>
+        <p class="fz_16">
+            16px is the minimal possible line height. It is acceptable for 14px font size and less. <br>
+            <span class="fz_12">I also don't recomment do use a size less than 12px.</span> <br>
+            So, 16px is the most commonly used font size and 32px line height makes it more readable. A good pair. <br>
+            48px = 32px * 1.5. It means that half of lines are not "in rhythm". <br>
+            But. <br>
+            Text with 64px line height will be always rhythmed with common text. The example:
+        </p>
+
+        <div class="col">
             <p class="fz_56">
-                56 lorem Lorem ipsum dolor sit amet
+                56px <br> 56px
             </p>
             <p class="fz_48">
-                48 lorem Lorem ipsum dolor sit amet
+                48px <br> 48px
             </p>
             <p class="fz_40">
-                40 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
+                40px <br> 40px
+            </p>
+            <p class="fz_32">
+                32px <br> 32px
+            </p>
+        </div>
+        <div class="col">
+            <p class="fz_48">
+                48px <br> 48px
             </p>
             <p class="fz_40">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
-                it amet, consectetur adipisicing elit. Officia, explicab
-
-                it amet, consectetur adipisicing elit. Officia, explicab
-                it amet, consectetur adipisicing elit. Officia, explicabit amet, consectetur adipisicing elit. Officia, explicab
+                40px <br> 40px
+            </p>
+            <p class="fz_32">
+                32px <br> 32px
+            </p>
+            <p class="fz_24">
+                24px <br> 24px
+            </p>
+            <p class="fz_20">
+                20px <br> 20px
+            </p>
+        </div>
+        <div class="col">
+            <p class="fz_40">
+                40px <br> 40px
+            </p>
+            <p class="fz_32">
+                32px <br> 32px
+            </p>
+            <p class="fz_24">
+                24px <br> 24px
+            </p>
+            <p class="fz_20">
+                20px <br> 20px
+            </p>
+            <p class="fz_18">
+                18px <br> 18px
+            </p>
+            <p class="fz_16">
+                16px <br> 16px
             </p>
         </div>
         <div class="col">
             <p class="fz_32">
-                32 lorem
-            </p>
-            <p class="fz_32">
-                32 lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                32px <br> 32px
             </p>
             <p class="fz_24">
-                24 lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, illum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
+                24px <br> 24px
             </p>
             <p class="fz_20">
-                20 lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, illum.
-                quasi quam repudiandae iste sint recusandae soluta voluptatibus illum voluptates,
-                sunt! Temporibus amet fugit, sit, id numquam sequi? Suscipit facere provident
+                20px <br> 20px
             </p>
             <p class="fz_18">
-                18 lorem Lorem ipsum dolor sit
+                18px <br> 18px
             </p>
             <p class="fz_16">
-                16 lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, illum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
+                16px <br> 16px
             </p>
             <p class="fz_14">
-                14 lorem
+                14px <br> 14px
             </p>
             <p class="fz_14">
-                lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, illum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, explicabo.
+                14px <br> 14px
             </p>
             <p class="fz_12">
-                12 lorem Lorem
+                12px <br> 12px
+            </p>
+            <p class="fz_12">
+                12px <br> 12px
             </p>
         </div>
+
+        <p class="fz_24">
+            Every text block have paddings depend on font size.
+        </p>
+        <p class="fz_16">
+            Top padding moves baseline to closest grid line. <br>
+            Bottom padding is needed to make total height of block divisible by 16.
+        </p>
+
     </div>
 
 
@@ -407,7 +485,7 @@
     <script>
         (function app() {
             var pageNames = [
-                'Sticky footer', 'Striked header', 'Breaked border', 'Vertical rhytm'
+                'Sticky footer', 'Striked header', 'Breaked border', 'Vertical rhythm'
             ];
             var pages = document.querySelectorAll('body > div');
             var currPageNum = 0;
