@@ -1,6 +1,6 @@
 # CSS-Temple
 
-[This is a collection of CSS based decisions.](https://anilator.github.io/CSS-Temple/)
+[This is a collection of CSS based decisions.](https://klimcode.github.io/CSS-Temple/)
 
 ### Includes:
 - [Sticky footer](https://anilator.github.io/CSS-Temple/#0) based on `display: table-row` property. 
