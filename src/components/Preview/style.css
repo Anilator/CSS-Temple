@@ -1,5 +1,6 @@
 .Preview {
   display: block;
+  margin-bottom: 64px;
   max-width: 320px;
   text-decoration: none;
   box-shadow: 2px 4px 10px 0px rgba(0,0,0,.5);
@@ -9,6 +10,9 @@
   color: #fff;
   text-align: center;
   background: #888;
+}
+.Preview:hover {
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,.4);
 }
 .Preview:hover .Preview__name {
   background: #89a;
