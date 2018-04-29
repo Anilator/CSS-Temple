@@ -10,7 +10,7 @@
 
 .Menu__list {
   height: 100%;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .Menu__list li {

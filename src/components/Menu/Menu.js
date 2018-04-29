@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Btn from './elements/Btn';
-import List from './elements/List';
+import Btn from './Btn';
+import List from './MenuList';
 
 
 export default class Menu extends Component {
@@ -15,8 +15,8 @@ export default class Menu extends Component {
   render() {
     return (
       <div className="Menu">
-        {this.state.isOpened && <List items={[1, 2, 333, 4, 5, 6, 7, 8, 9]} />}
-        <Btn onClick={this.onClick} isOpened={this.state.isOpened} />
+        {this.state.isOpened && <List items={this.props.items} />}
+        <Btn onClick={this.onClick} isPressed={this.state.isOpened} />
       </div>
     );
   }

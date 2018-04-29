@@ -1,0 +1,17 @@
+.Preview {
+  display: block;
+  max-width: 320px;
+  text-decoration: none;
+  box-shadow: 2px 4px 10px 0px rgba(0,0,0,.5);
+}
+.Preview__name {
+  display: block;
+  color: #fff;
+  text-align: center;
+  background: #888;
+}
+.Preview:hover .Preview__name {
+  background: #89a;
+}
+
+.Preview__img {}

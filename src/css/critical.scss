@@ -7,6 +7,7 @@ html {
   color: #222;
   font-family: 'opensans', sans-serif;
   font-size: 16px;
+  background: #eee;
 }
 body, #root {
   height: 100%;
@@ -19,6 +20,9 @@ ul {
   padding: 0;
   list-style: none;
 }
+img {
+  max-width: 100%;
+}
 
 
 // LAYOUT
@@ -28,18 +32,19 @@ ul {
   min-height: 100%;
   min-width: 320px;
 
-  @extend %ruler;
+  // @extend %ruler;
 }
 // .app__header {}
 .app__body { flex: 1 0 auto; }
 .app__footer { flex-shrink: 0; }
 .app__container {
   margin: auto;
-  max-width: 800px;
+  max-width: 768px;
 }
 
 
 // CUSTOM STYLES FOR THE FIRST SCREEN
+.app__header { height: 64px; }
 .app__header h1 { @extend %rhytm_40; }
 .app__header p { @extend %rhytm_16; }
 .app__header .app__container {
@@ -48,6 +53,14 @@ ul {
 .rhytm_table { @extend %rhytm_table; }
 .rhytm_table td { @extend %rhytm_table__td16; }
 
+.fs_16 { @extend %rhytm_16; }
+.fs_20 { @extend %rhytm_20; }
+
+.PageMain {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
 // > Sony Xperia screen
 @media screen and (min-width: 541px) {

@@ -1,8 +1,14 @@
 @import url(./vendor/normalize.css);
-.app__header p {
+.app__header p, .fs_16 {
   margin: 0;
   padding: 25px 0 7px 0;
   font-size: 16px;
+  line-height: 32px; }
+
+.fs_20 {
+  margin: 0;
+  padding: 24px 0 8px 0;
+  font-size: 20px;
   line-height: 32px; }
 
 .app__header h1 {
@@ -10,9 +16,6 @@
   padding: 64px 0 0 0;
   font-size: 40px;
   line-height: 64px; }
-
-.app {
-  background: linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px) left -1px/16px 16px, linear-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px) left -1px/64px 64px; }
 
 .rhytm_table {
   margin: 0 auto;
@@ -28,7 +31,8 @@ html {
   height: 100%;
   color: #222;
   font-family: 'opensans', sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  background: #eee; }
 
 body, #root {
   height: 100%; }
@@ -40,6 +44,9 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none; }
+
+img {
+  max-width: 100%; }
 
 .app {
   display: flex;
@@ -55,7 +62,15 @@ ul {
 
 .app__container {
   margin: auto;
-  max-width: 800px; }
+  max-width: 768px; }
+
+.app__header {
+  height: 64px; }
 
 .app__header .app__container {
   display: flex; }
+
+.PageMain {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
