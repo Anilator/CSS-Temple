@@ -1,6 +1,6 @@
 # Compiled project
 build/
-static/
+# static/
 
 # IDE workspaces
 *.sublime-project
