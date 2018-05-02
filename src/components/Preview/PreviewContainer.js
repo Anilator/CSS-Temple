@@ -2,7 +2,7 @@ import React from 'react';
 import Preview from './PreviewPresent';
 
 const getPath = string =>
-  `/static/media/${string.replace(/[ !@#$%^&*()_+=]+/g, '-').toLowerCase()}.jpg`;
+  `${process.env.PUBLIC_URL}/static/media/${string.replace(/[ !@#$%^&*()_+=]+/g, '-').toLowerCase()}.jpg`;
 
 export default class PreviewContainer extends React.Component {
   render() {
