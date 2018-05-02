@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 
 import App from './components/App';
 import './css/critical.css';
@@ -10,9 +10,9 @@ import('./css/rest.css');
 
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
     <Route psth="/" component={App} />
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById('root'),
 );
 
