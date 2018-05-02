@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "a collection of solved CSS problems",
   "scripts": {
-    "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "build-css": "node-sass-chokidar src/ -o src/ --include-path ./node_modules",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ -w --recursive --include-path ./node_modules",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",

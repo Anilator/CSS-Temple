@@ -5,10 +5,10 @@ export default class PageSplitHeaderPresent extends React.Component {
     return (
       <div className="PageSplitHeader">
         <div className="header-split">
-          <h2>Some split header</h2>
+          <h2>Split-line header</h2>
         </div>
         <div className="header-split">
-          <h2>Some multiline <br /> split header</h2>
+          <h2>A multiline <br /> split-line header <br /> Lorem ipsum dolor sit</h2>
         </div>
       </div>
     );

@@ -12,7 +12,10 @@ html {
 body, #root {
   height: 100%;
 }
-::-moz-selection, ::selection {
+::-moz-selection {
+  background: #b3d4fc;
+}
+::selection {
   background: #b3d4fc;
 }
 ul {
@@ -35,8 +38,6 @@ h1, h2 {
   flex-direction: column;
   min-height: 100%;
   min-width: 320px;
-
-  // @extend %ruler;
 }
 // .app__header {}
 .app__body {
@@ -91,6 +92,79 @@ h1, h2 {
 }
 
 // DECISIONS
+/* Rhytm */
+.PageRhytm {
+  text-align: center;
+  margin: auto;
+  max-width: 768px;
+  // padding: 0 16px;
+  width: 100%;
+
+  @extend %ruler;
+}
+.PageRhytm hr {
+  @extend %rhytm_hr_64;
+}
+.fs_12 {
+  @extend %rhytm_12;
+}
+.fs_14 {
+  @extend %rhytm_14;
+}
+.fs_16 {
+  @extend %rhytm_16;
+}
+.fs_16_low {
+  @extend %rhytm_16_low;
+}
+.fs_18 {
+  @extend %rhytm_18;
+}
+.fs_20 {
+  @extend %rhytm_20;
+}
+.fs_20_hi {
+  @extend %rhytm_20_64;
+}
+.fs_24 {
+  @extend %rhytm_24;
+}
+.fs_24_hi {
+  @extend %rhytm_24_64;
+}
+.fs_32 {
+  @extend %rhytm_32;
+}
+.fs_40 {
+  @extend %rhytm_40;
+}
+.fs_48 {
+  @extend %rhytm_48;
+}
+.fs_56 {
+  @extend %rhytm_56;
+}
+.table_16 {
+  @extend %rhytm_table;
+  min-width: 320px;
+}
+.table_16 td {
+  @extend %rhytm_table__td16_32px;
+}
+.columns {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 520px;
+  margin: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.columns > div {
+  background: rgba(255,128,0, .1);
+}
+
+
 /* split header */
 .PageSplitHeader {
   flex: 1 0 auto;
