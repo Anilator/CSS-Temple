@@ -6,7 +6,7 @@ export default class PageMain extends Component {
     const Preview = this.props.preview;
 
     return (
-      <div className="PageMain">
+      <div className="PageMain noselect">
         {this.props.pages.map((page, i) => (
           <Link to={page.path} key={i} className="Preview">
             <Preview name={page.name} comp={page.comp} />

@@ -136,6 +136,9 @@ img {
 h1, h2 {
   margin-top: 64px; }
 
+.noselect {
+  user-select: none; }
+
 .app {
   display: flex;
   flex-direction: column;
