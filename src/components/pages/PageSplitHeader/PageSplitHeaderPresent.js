@@ -8,7 +8,7 @@ export default class PageSplitHeaderPresent extends React.Component {
           <h2>Split-line header</h2>
         </div>
         <div className="header-split">
-          <h2>A multiline <br /> split-line header <br /> Lorem ipsum dolor sit</h2>
+          <h2>Lines are invisible<br />on mobile devices</h2>
         </div>
       </div>
     );

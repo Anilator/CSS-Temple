@@ -196,10 +196,9 @@ h1, h2 {
 /* split header */
 .PageSplitHeader {
   flex: 1 0 auto;
-  padding-top: 64px;
   color: #fff;
-  background: linear-gradient(90deg, rgba(25, 25, 32, 0.8) 50%, rgba(0, 0, 0, 0.2) 50%), linear-gradient(90deg, rgba(22, 23, 30, 0.8) 50%, rgba(0, 0, 0, 0.2) 50%), linear-gradient(90deg, rgba(25, 20, 32, 0.8) 50%, rgba(0, 0, 0, 0.2) 50%), linear-gradient(90deg, rgba(23, 26, 29, 0.8) 50%, rgba(0, 0, 0, 0.2) 50%), linear-gradient(0deg, #555 0%, #000 100%);
-  background-size: 49em 1em, 11em 1em, 7em 1em, 3em 1em, 100% 100%; }
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(90deg, rgba(0, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(90deg, rgba(0, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(90deg, rgba(0, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(90deg, rgba(0, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(180deg, #00aaff, #ff5500 100%);
+  background-size: 3% 1px, 5% 1px, 13% 1px, 17% 1px, 37% 1px, 100% 100%; }
 
 .header-split {
   overflow: hidden;
