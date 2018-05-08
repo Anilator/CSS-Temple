@@ -250,6 +250,7 @@ $_baseline_padding_bottom: 64px - $border_tail_length - $border_width;
 .br__side {
   position: absolute;
   bottom: $border_width + $_baseline_padding_bottom;
+  left: 0;
   top: $border_width + $_baseline_padding_top;
   display: flex;
   flex-direction: column;
